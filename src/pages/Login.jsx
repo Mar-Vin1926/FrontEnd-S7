@@ -1,10 +1,19 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Login.css'
-import { Link } from 'react-router-dom'
+import { alertaRedireccion } from '../helpers/funciones'
 function Login() {
 
   const [getUsuario, setUsuario] = useState("")
   const [getPassword, setPassword] = useState("")
+  let redireccion = useNavigate()
+
+  function iniciarSesion(){
+    if (getUsuario === "Marvin" && getPassword === "admin"){
+      localStorage.setItem("usuario", getUsuario )
+      alertaRedireccion("Bienvenido", "/home", redireccion)
+    }
+  }
   
   return (
     <div className="container">
@@ -14,7 +23,7 @@ function Login() {
           <div className="form_details">Login</div>
           <input onChange={(e)=> setUsuario(e.target.value)} type="text" className="input" placeholder="Username" />
           <input onChange={(e)=> setPassword(e.target.value)} type="text" className="input" placeholder="Password" />
-          <Link to="/home" className="btn">Login</Link>
+          <button type='button' onClick={iniciarSesion} className="btn">Login</button>
           <span className="switch">Don't have an account?
             <label for="signup_toggle" className="signup_tog">
               Sign Up
