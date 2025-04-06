@@ -9,7 +9,7 @@ function Login() {
   let redireccion = useNavigate()
 
   function iniciarSesion(){
-    if (getUsuario === "Marvin" && getPassword === "admin"){
+    if (getUsuario === "admin" && getPassword === "admin"){
       localStorage.setItem("usuario", getUsuario )
       alertaRedireccion("Bienvenido", "/home", redireccion)
     }
@@ -22,7 +22,7 @@ function Login() {
         <div className="form_front">
           <div className="form_details">Login</div>
           <input onChange={(e)=> setUsuario(e.target.value)} type="text" className="input" placeholder="Username" />
-          <input onChange={(e)=> setPassword(e.target.value)} type="text" className="input" placeholder="Password" />
+          <input onChange={(e)=> setPassword(e.target.value)} type="password" className="input" placeholder="Password" />
           <button type='button' onClick={iniciarSesion} className="btn">Login</button>
           <span className="switch">Don't have an account?
             <label for="signup_toggle" className="signup_tog">
@@ -34,8 +34,8 @@ function Login() {
           <div className="form_details">SignUp</div>
           <input type="text" className="input" placeholder="Firstname" />
           <input type="text" className="input" placeholder="Username" />
-          <input type="text" className="input" placeholder="Password" />
-          <input type="text" className="input" placeholder="Confirm Password" />
+          <input type="password" className="input" placeholder="Password" />
+          <input type="password" className="input" placeholder="Confirm Password" />
           <button className="btn">Signup</button>
           <span className="switch">Already have an account?
             <label for="signup_toggle" className="signup_tog">

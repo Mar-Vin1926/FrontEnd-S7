@@ -10,7 +10,7 @@ const Home = () => {
       <div className="aplicacion__contenido-fondo"></div>
       <main className="aplicacion__principal">
         <section className="aplicacion__eslogan">
-          <h2 className="aplicacion__eslogan-texto"><span>TrackX:</span> Logística inteligente, rastreo preciso.</h2>
+          <h2 className="aplicacion__eslogan-texto"><span>EvaluAPP:</span>Evaluaciones inteligentes, resultados brillantes.</h2>
         </section>
         <Contenido />
       </main>

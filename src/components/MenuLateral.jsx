@@ -8,13 +8,13 @@ const MenuLateral = () => {
 
   return (
     <aside className="aplicacion__menu-lateral">
-      <h1 className="aplicacion__menu-lateral-logo">Track <span className="aplicacion__menu-lateral-logo--resaltado">X</span></h1>
+      <h1 className="aplicacion__menu-lateral-logo">EvaluAPP <span className="aplicacion__menu-lateral-logo--resaltado"></span></h1>
       <h2>Usuario: { localStorage.getItem("usuario")}</h2>
-      <img className="aplicacion__menu-lateral-logo-imagen" src="/logo.jpg" alt="Logo" />
+      <img className="aplicacion__menu-lateral-logo-imagen" src="/public/Fondo2.jpg" alt="Logo" />
       <nav className="aplicacion__menu-lateral-navegacion">
         <a className="aplicacion__menu-lateral-navegacion-item" href="">Inicio</a>
-        <a className="aplicacion__menu-lateral-navegacion-item" href="">Gestión de envíos</a>
-        <a className="aplicacion__menu-lateral-navegacion-item" href="">Gestión de clientes</a>
+        <a className="aplicacion__menu-lateral-navegacion-item" href="">Evaluaciones</a>
+        <a className="aplicacion__menu-lateral-navegacion-item" href="">Notas</a>
         <button onClick={cerrarSesion} type='button' className="aplicacion__menu-lateral-navegacion-item">Cerrar sesión</button>
       </nav>
     </aside>
