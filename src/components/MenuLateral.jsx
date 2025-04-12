@@ -2,7 +2,9 @@ import { alertaRedireccion } from "../helpers/funciones"
 import { useNavigate } from "react-router-dom"
 const MenuLateral = () => {
   let redireccion = useNavigate()
-  function cerrarSesion(){
+  function cerrarSesion(){ 
+    localStorage.removeItem("token")
+    localStorage.removeItem("usuario")
     alertaRedireccion("Cerrando sesion", "/", redireccion)
   }
 
