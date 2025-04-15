@@ -40,7 +40,7 @@ function Login() {
         </div>
         <div className="form_back">
           <div className="form_details">SignUp</div>
-          <input type="text" className="input" placeholder="Nombre Completo" />
+          <input type="text" className="input" placeholder="Full Name" />
           <input type="email" className="input" placeholder="Email" />
           <input type="text" className="input" placeholder="Role" />
           <input type="password" className="input" placeholder="Password" />
