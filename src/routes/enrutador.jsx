@@ -1,16 +1,28 @@
-import RutaProtegida from '../components/RutaProtegida'
-import Home from '../Home'
-import Login from '../pages/Login'
+import Login from '../pages/Login.jsx';
+import Home from '../Home';
+import RutaProtegida from '../components/RutaProtegida';
 
-export let enrutador = [
-    {
-        path: '/',
-        element: <Login />
-    },
-    {
-        path: '/home',
-        element: <RutaProtegida proteger={<Home />} />
-    }
-]
+const enrutador = [
+  {
+    path: '/',
+    element: <Login />,
+  },
+  {
+    path: '/home',
+    element: (
+      <RutaProtegida rolRequerido="Teacher">
+        <Home />
+      </RutaProtegida>
+    ),
+  },
+  {
+    path: '/student',
+    element: (
+      <RutaProtegida rolRequerido="Student">
+        <Home />
+      </RutaProtegida>
+    ),
+  },
+];
 
-
+export default enrutador;

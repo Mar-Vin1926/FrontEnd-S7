@@ -14,13 +14,20 @@ function Login() {
   console.log(generarToken())
 
   function iniciarSesion() {
-    if (getUsuario === "admin" && getPassword === "admin") {
-      let token = generarToken()
-      localStorage.setItem("token", token)
-      localStorage.setItem("usuario", getUsuario)
-      alertaRedireccion("Bienvenido" + getUsuario, "/home", redireccion)
+    if (getUsuario === "teacher" && getPassword === "teacher123") {
+      let token = generarToken();
+      localStorage.setItem("token", token);
+      localStorage.setItem("usuario", getUsuario);
+      localStorage.setItem("rol", "Teacher"); // Guardar el rol
+      alertaRedireccion("Bienvenido, Teacher", "/home", redireccion);
+    } else if (getUsuario === "student" && getPassword === "student123") {
+      let token = generarToken();
+      localStorage.setItem("token", token);
+      localStorage.setItem("usuario", getUsuario);
+      localStorage.setItem("rol", "Student"); // Guardar el rol
+      alertaRedireccion("Bienvenido, Student", "/student", redireccion); // Redirigir a /student
     } else {
-      alertaError("Error", "Usuario o contraseña incorrectos", "error")
+      alertaError("Error", "Usuario o contraseña incorrectos", "error");
     }
   }
 
