@@ -40,11 +40,11 @@ function Login() {
         </div>
         <div className="form_back">
           <div className="form_details">SignUp</div>
-          <input type="text" className="input" placeholder="Firstname" />
+          <input type="text" className="input" placeholder="Nombre Completo" />
+          <input type="email" className="input" placeholder="Email" />
           <input type="text" className="input" placeholder="Role" />
           <input type="password" className="input" placeholder="Password" />
           <input type="password" className="input" placeholder="Confirm Password" />
-          <input type="email" className="input" placeholder="Email" />
           <button className="btn">Signup</button>
           <span className="switch">Already have an account?
             <label for="signup_toggle" className="signup_tog">
