@@ -9,6 +9,7 @@ function Login() {
   const [getUsuario, setUsuario] = useState("")
   const [getPassword, setPassword] = useState("")
   let redireccion = useNavigate()
+  const [getRol, setRol] = useState("")
 
   console.log(generarToken())
 
@@ -42,7 +43,16 @@ function Login() {
           <div className="form_details">SignUp</div>
           <input type="text" className="input" placeholder="Full Name" />
           <input type="email" className="input" placeholder="Email" />
-          <input type="text" className="input" placeholder="Role" />
+          <select
+            className="input"
+            value={getRol}
+            onChange={(e) => setRol(e.target.value)}
+          >
+            <option value="">Select Role</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Student">Student</option>
+            {/* Puedes agregar más roles aquí si es necesario */}
+          </select>
           <input type="password" className="input" placeholder="Password" />
           <input type="password" className="input" placeholder="Confirm Password" />
           <button className="btn">Signup</button>
