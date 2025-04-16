@@ -22,7 +22,7 @@
 }
 
 .aplicacion__menu-lateral-logo {
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   display: flex;
   letter-spacing: 2px;
@@ -32,11 +32,11 @@
 
 .aplicacion__menu-lateral-logo--resaltado {
   color: black;
-  margin-left: 3px;
+  margin-left: 1px;
 }
 
 .aplicacion__menu-lateral-logo-imagen {
-  width: 90%;
+  width: 70%;
   border-radius: 10px;
   transition: ease-in-out 0.3s;
 }

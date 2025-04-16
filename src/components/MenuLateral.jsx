@@ -1,5 +1,8 @@
 import { alertaRedireccion } from "../helpers/funciones";
 import { useNavigate } from "react-router-dom";
+import adminImage from "../assets/admin.png";
+import teacherImage from "../assets/Teacher.png";
+import studentImage from "../assets/Student.png";
 
 const MenuLateral = () => {
   let redireccion = useNavigate();
@@ -12,6 +15,14 @@ const MenuLateral = () => {
     alertaRedireccion("Cerrando sesión", "/", redireccion);
   }
 
+  // Seleccionar la imagen según el rol
+  const getImageByRole = () => {
+    if (rol === "admin") return adminImage;
+    if (rol === "Teacher") return teacherImage;
+    if (rol === "Student") return studentImage;
+    return ""; // Imagen por defecto si no hay rol
+  };
+
   return (
     <aside className="aplicacion__menu-lateral">
       <h1 className="aplicacion__menu-lateral-logo">
@@ -20,11 +31,10 @@ const MenuLateral = () => {
       <h2>Usuario: {localStorage.getItem("usuario")}</h2>
       <img
         className="aplicacion__menu-lateral-logo-imagen"
-        src="/public/Fondo2.jpg"
-        alt="Logo"
+        src={getImageByRole()}
+        alt={`Imagen del rol ${rol}`}
       />
       <nav className="aplicacion__menu-lateral-navegacion">
-        {/* Funcionalidades según el rol */}
         {(rol === "Teacher" || rol === "admin") && (
           <>
             <a className="aplicacion__menu-lateral-navegacion-item" href="">
@@ -43,6 +53,17 @@ const MenuLateral = () => {
             <a className="aplicacion__menu-lateral-navegacion-item" href="">
               Ver Mis Notas
             </a>
+          </>
+        )}
+        {rol === "admin" && (
+          <>
+            <a className="aplicacion__menu-lateral-navegacion-item" href="">
+              Gestión de Usuarios
+            </a>
+            <a className="aplicacion__menu-lateral-navegacion-item" href="">
+              Configuración
+            </a>
+            
           </>
         )}
         <button
