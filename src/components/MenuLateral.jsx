@@ -25,7 +25,7 @@ const MenuLateral = () => {
       />
       <nav className="aplicacion__menu-lateral-navegacion">
         {/* Funcionalidades según el rol */}
-        {rol === "Teacher" && (
+        {(rol === "Teacher" || rol === "admin") && (
           <>
             <a className="aplicacion__menu-lateral-navegacion-item" href="">
               Crear Examen
@@ -35,7 +35,7 @@ const MenuLateral = () => {
             </a>
           </>
         )}
-        {rol === "Student" && (
+        {(rol === "Student" || rol === "admin") && (
           <>
             <a className="aplicacion__menu-lateral-navegacion-item" href="">
               Realizar Examen

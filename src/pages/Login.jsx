@@ -26,6 +26,12 @@ function Login() {
       localStorage.setItem("usuario", getUsuario);
       localStorage.setItem("rol", "Student"); // Guardar el rol
       alertaRedireccion("Bienvenido, Student", "/student", redireccion); // Redirigir a /student
+    }  else if (getUsuario === "admin" && getPassword === "admin") {
+      let token = generarToken();
+      localStorage.setItem("token", token);
+      localStorage.setItem("usuario", getUsuario);
+      localStorage.setItem("rol", "admin"); // Guardar el rol
+      alertaRedireccion("Bienvenido, admin", "/home", redireccion); // Redirigir a /student
     } else {
       alertaError("Error", "Usuario o contraseña incorrectos", "error");
     }

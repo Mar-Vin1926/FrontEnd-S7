@@ -7,7 +7,7 @@ const enrutador = [
     path: '/',
     element: <Login />,
   },
-  {
+    {
     path: '/home',
     element: (
       <RutaProtegida rolRequerido="Teacher">
@@ -20,6 +20,14 @@ const enrutador = [
     element: (
       <RutaProtegida rolRequerido="Student">
         <Home />
+      </RutaProtegida>
+    ),
+  },
+  {
+    path: '/admin',
+    element: (
+      <RutaProtegida rolRequerido="admin">
+        <Home /> 
       </RutaProtegida>
     ),
   },
