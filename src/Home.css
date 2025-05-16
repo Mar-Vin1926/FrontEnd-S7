@@ -191,7 +191,7 @@
 }
 
 .aplicacion__informacion {
-  background-color: #F2CDAC; /* Fondo claro */
+  background-color: #0a4d49; /* Fondo claro */
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 15px;
@@ -200,7 +200,7 @@
 }
 
 .form-container {
-  background-color: #F2CDAC; /* Fondo claro */
+  background-color: #0a4d49; /* Fondo claro */
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 15px;
@@ -209,22 +209,6 @@
   width: 100%;
   box-sizing: border-box;
 
-}
-
-.form-container .card__buttons button {
-  height: 45px;
-  padding: 12px 24px;
-  cursor: pointer;
-  background-color: #F2CDAC;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-  color: #4C4A59;
-  font-size: 1.1em;
-  font-weight: 500;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
-  width: auto;
-  margin-left: 10px;
 }
 
 .form-group {
