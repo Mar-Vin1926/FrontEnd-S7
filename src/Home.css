@@ -17,86 +17,127 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  padding: 10px;
-  background-color: #c09c4e;
+  padding: 20px; /* Aumenté un poco el padding para más espacio */
+  background-color: #f8f8f8; /* Ejemplo: Un gris muy claro */
 }
 
 .aplicacion__menu-lateral-logo {
-  font-size: 40px;
+  font-size: 30px; /* Reduje un poco el tamaño */
   text-align: center;
   display: flex;
-  letter-spacing: 2px;
-  color: gray;
+  letter-spacing: 1px; /* Reduje el espaciado */
+  color: #333; /* Un gris oscuro */
   cursor: pointer;
+  margin-bottom: 20px; /* Añadí margen inferior */
 }
 
 .aplicacion__menu-lateral-logo--resaltado {
-  color: black;
-  margin-left: 1px;
+  color: #1B7F7A; /* Usando un color акцентный de tu paleta */
+  margin-left: 2px;
 }
 
 .aplicacion__menu-lateral-logo-imagen {
-  width: 70%;
-  border-radius: 10px;
+  width: 60%; /* Reduje un poco el tamaño */
+  border-radius: 8px;
   transition: ease-in-out 0.3s;
+  margin-bottom: 30px; /* Añadí margen inferior */
+  border: 1px solid #ddd; /* Añadí un borde sutil */
+  box-shadow: none;
 }
 
 .aplicacion__menu-lateral-logo-imagen:hover {
-  transform: scale(1.1);
-  box-shadow: 3px 3px 2px #f0b27d, 5px 5px 2px black;
+  transform: scale(1.05);
+  box-shadow: none;
 }
 
 .aplicacion__menu-lateral-navegacion {
-  padding: 0px 0px 0px 20px;
+  padding: 0; /* Eliminé el padding izquierdo */
   width: 100%;
-  height: 60vh;
+  height: auto; /* Ajusté la altura a automático */
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
   flex-direction: column;
+  align-items: stretch;
+}
+.aplicacion__menu-lateral h2 {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .aplicacion__menu-lateral-navegacion-item {
+  display: block; /* Para que el padding ocupe todo el ancho */
+  padding: 10px 0; /* Ajusté el padding vertical */
   text-decoration: none;
-  color: white;
-  letter-spacing: 2px;
-  font-weight: 700;
+  color: #555; /* Un gris medio para el texto */
+  letter-spacing: 1px;
+  font-weight: 500; /* Un peso de fuente más ligero */
   position: relative;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 16px; /* Reduje el tamaño de la fuente */
+  text-align: left;
 
 }
 
 .aplicacion__menu-lateral-navegacion-item::after {
-  content: '';
+   content: '';
   width: 100%;
-  transform: scale(0);
+  transform: scaleX(0); /* Cambié a scaleX para la animación horizontal */
   position: absolute;
-  background-color: white;
-  height: 3px;
+  background-color: #1B7F7A; /* Usando el color акцентный */
+  height: 2px; /* Reduje la altura de la línea */
   left: 0;
   bottom: 0;
-  transition: ease-in-out 0.3s;
+  transition: transform 0.3s
 }
 
 .aplicacion__menu-lateral-navegacion-item:hover::after {
-  transform: scale(1);
+  transform: scaleX(1);
 
+}
+.aplicacion__menu-lateral-navegacion button {
+  display: block; /* Para que el padding ocupe todo el ancho */
+  padding: 10px 0; /* Ajusté el padding vertical */
+  text-decoration: none;
+  color: #555; /* Un gris medio para el texto */
+  letter-spacing: 1px;
+  font-weight: 500; /* Un peso de fuente más ligero */
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 16px; /* Reduje el tamaño de la fuente */
+  text-align: left; /* Alineé el texto a la izquierda */
+  cursor: pointer;
+}
+.aplicacion__menu-lateral-navegacion button::after {
+  content: '';
+  width: 100%;
+  transform: scaleX(0); /* Cambié a scaleX para la animación horizontal */
+  position: absolute;
+  background-color: #1B7F7A; /* Usando el color акцентный */
+  height: 2px; /* Reduje la altura de la línea */
+  left: 0;
+  bottom: 0;
+  transition: transform 0.3s ease-in-out; /* Cambié la propiedad de transición */
+}
+.aplicacion__menu-lateral-navegacion button:hover::after {
+  transform: scaleX(1);
 }
 
 .aplicacion__contenido {
-  position: absolute;
+   position: absolute;
   top: 0;
   right: 0;
   width: 80%;
   height: auto;
   min-height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; /* Centrar el contenido principal */
+  align-items: center; /* Centrar el contenido principal verticalmente */
   flex-direction: column;
   z-index: 2;
+  padding: 40px;
 }
 
 .aplicacion__contenido-fondo {
@@ -105,94 +146,91 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8); /* Un fondo blanco ligeramente transparente */
   transition: background-color 0.3s ease-in-out;
   z-index: -1;
 }
 
 .aplicacion__principal {
   width: 100%;
-  min-height: 100vh;
+  max-width: 1200px; /* Limitar el ancho máximo del contenido */
+  min-height: auto; /* Ajustar la altura automáticamente */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Alinear los elementos al inicio */
   align-items: center;
   flex-direction: column;
 }
 
 .aplicacion__eslogan {
-  height: 20vh;
+  height: auto; /* Ajustar la altura automáticamente */
+  padding: 40px 0; /* Añadir padding vertical */
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center; /* Centrar el texto del eslogan */
 }
 
 .aplicacion__eslogan-texto {
-  font-size: 50px;
-  font-weight: 700;
-  color: #731702;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 1px white;
+  font-size: 36px; /* Reduje el tamaño de la fuente */
+  font-weight: 500; /* Un peso de fuente más ligero */
+  color: #333; /* Un color oscuro */
+  letter-spacing: 1px;
+  text-shadow: none; /* Eliminé la sombra del texto */
   transition: ease-in-out 0.3s;
-  text-align: center;
 }
 
 .aplicacion__eslogan-texto span {
+  color: #1B7F7A; /* Usando el color акцентный */
   transition: ease-in-out all 0.5s;
   cursor: pointer;
 }
 
 .aplicacion__eslogan-texto span:hover {
-  text-shadow: 2px 2px 1px white, 4px 4px 1px black, 6px 6px 1px #731702;
+  text-shadow: none; /* Eliminé la sombra al pasar el ratón */
+  color: #0a4d49; /* Un tono más oscuro del акцентный al pasar el ratón */
 }
 
 .aplicacion__informacion {
   width: 100%;
-  height: 80vh;
-  min-height: 80vh;
+  height: auto; /* Ajustar la altura automáticamente */
+  min-height: auto;
   padding: 20px;
+  /* Otros estilos para la información */
 }
 
 .aplicacion__informacion:hover~.aplicacion__contenido-fondo {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .cards {
-  padding: 10px;
+  padding: 20px; /* Aumenté el padding interno */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 100%;
+  gap: 20px; /* Añadí espacio entre las tarjetas */
+  height: auto; /* Ajusté la altura automáticamente */
 }
 
 .card {
   position: relative;
-  width: 230px;
-  height: 40%;
-  margin: 0 auto;
-  border: solid 1.5px #731702;
+  width: 280px; /* Aumenté un poco el ancho */
+  height: auto; /* Ajustar la altura automáticamente */
+  margin: 0; /* Eliminé el margen automático */
+  border: solid 1px #ccc; /* Borde más sutil */
   border-radius: 8px;
   z-index: 1;
-  transition: ease-in-out 0.4s;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añadí transición para la sombra */
   display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
   flex-direction: column;
-  background-color: white;
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .card::after,
 .card::before {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  transform: scale(0);
-  content: '';
-  top: 0;
-  left: 0;
-  border-radius: 8px;
-  transition: ease-in-out 0.3s;
+  display: none;
 }
 
 
@@ -217,26 +255,28 @@
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px); /* Ligeramente hacia arriba al hacer hover */
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra un poco más pronunciada al hacer hover */
 }
 
 .tools {
   display: flex;
   align-items: center;
-  padding: 9px;
-  height: 10%;
+  padding: 10px;
+  height: auto; /* Ajustar la altura automáticamente */
+  border-bottom: 1px solid #eee; /* Separador sutil */
 }
 
 .circle {
-  padding: 0 4px;
+  padding: 0 6px;
 }
 
 .box {
   display: inline-block;
   align-items: center;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   padding: 1px;
   border-radius: 50%;
 }
@@ -254,12 +294,12 @@
 }
 
 .card__content {
-  height: 90%;
+  height: auto; /* Ajustar la altura automáticamente */
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start; /* Alinear al inicio */
   flex-direction: column;
-  padding: 10px;
+  padding: 15px;
 }
 
 
@@ -269,7 +309,23 @@
   gap: 10px;
   align-items: center;
   width: 100%;
+  height: auto; /* Ajustar la altura automáticamente */
+  padding: 10px;
+  border-top: 1px solid #eee; /* Separador sutil */
+}
+
+.card__buttons button {
   height: 30px;
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: #f0f0f0; /* Un gris claro para los botones */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: normal;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .card__buttons button:first-child,
@@ -278,10 +334,20 @@
 }
 
 .card__buttons button:first-child {
-  background-color: #ca9d66;
+  background-color: #1B7F7A; /* Color акцентный para el primer botón */
+  color: white;
 }
 .card__buttons button:last-child {
-  background-color: white;
+  background-color: white; /* Fondo blanco para el segundo botón */
+  color: #1B7F7A; /* Color акцентный para el texto del segundo botón */
+}
+
+.card__buttons button:hover {
+  background-color: #d9d9d9; /* Un gris ligeramente más oscuro al hacer hover */
+}
+
+.card__buttons button:first-child:hover {
+  background-color: #0a4d49; /* Un tono más oscuro del акцентный al hacer hover */
 }
 
 .card__button {

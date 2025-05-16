@@ -9,8 +9,12 @@
 }
 
 body {
-  background: url('/public/Fondo1.jpg') no-repeat left center fixed,
-              url('/public/Fondo2.jpg') no-repeat right center fixed;
-  background-size: 50% 100%, 50% 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #F2CDAC; /* Ejemplo: Usando uno de los tonos melocotón claro */
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  display: flex; /* Para centrar el contenido del login */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  min-height: 100vh; /* Asegurar que el fondo cubra toda la altura de la pantalla */
 }

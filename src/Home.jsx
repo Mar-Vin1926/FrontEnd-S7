@@ -16,7 +16,7 @@ const Home = () => {
         <main className="aplicacion__principal">
           <section className="aplicacion__eslogan">
             <h2 className="aplicacion__eslogan-texto">
-              <span>EvaluAPP:</span> Evaluaciones inteligentes, resultados brillantes.
+              <span></span>
             </h2>
           </section>
         </main>
