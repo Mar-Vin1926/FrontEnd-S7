@@ -191,11 +191,63 @@
 }
 
 .aplicacion__informacion {
-  width: 100%;
-  height: auto; /* Ajustar la altura automáticamente */
-  min-height: auto;
+  background-color: #F2CDAC; /* Fondo claro */
+  border-radius: 8px;
   padding: 20px;
-  /* Otros estilos para la información */
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0; /* Añadí un borde muy sutil para definirlo más */
+}
+
+.form-container {
+  background-color: #F2CDAC; /* Fondo claro */
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.form-container .card__buttons button {
+  height: 45px;
+  padding: 12px 24px;
+  cursor: pointer;
+  background-color: #F2CDAC;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  color: #4C4A59;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  width: auto;
+  margin-left: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #4C4A59;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  color: #333;
+  width: 100%; /* Aseguramos que los inputs ocupen todo el ancho del form-container */
+  box-sizing: border-box;
 }
 
 .aplicacion__informacion:hover~.aplicacion__contenido-fondo {
@@ -203,29 +255,29 @@
 }
 
 .cards {
-  padding: 20px; /* Aumenté el padding interno */
+  padding: 30px;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 20px; /* Añadí espacio entre las tarjetas */
-  height: auto; /* Ajusté la altura automáticamente */
+  display: grid;
+  /* Vamos a definir las columnas de forma más explícita para que ocupen más espacio */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Aumenté significativamente el ancho mínimo */
+  gap: 30px;
+  align-items: start;
+  height: auto;
 }
 
 .card {
   position: relative;
-  width: 280px; /* Aumenté un poco el ancho */
-  height: auto; /* Ajustar la altura automáticamente */
-  margin: 0; /* Eliminé el margen automático */
-  border: solid 1px #ccc; /* Borde más sutil */
-  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 1px solid #e0e0e0; /* Reintroduje un borde muy sutil */
+  border-radius: 12px; /* Bordes más redondeados */
   z-index: 1;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añadí transición para la sombra */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   background-color: #fff; /* Fondo blanco */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra más definida pero suave */
 }
 
 .card::after,
@@ -255,17 +307,14 @@
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Ligeramente hacia arriba al hacer hover */
+  transform: translateY(-8px); /* Mayor elevación al hacer hover */
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra un poco más pronunciada al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada al hacer hover */
+
 }
 
 .tools {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  height: auto; /* Ajustar la altura automáticamente */
-  border-bottom: 1px solid #eee; /* Separador sutil */
+display: none; /* Oculté la sección de herramientas */
 }
 
 .circle {
@@ -294,38 +343,91 @@
 }
 
 .card__content {
-  height: auto; /* Ajustar la altura automáticamente */
-  width: 100%;
-  display: flex;
-  justify-content: flex-start; /* Alinear al inicio */
+  height: auto; /* Ajusté la altura automáticamente */
+  width: 100%; /* Aseguramos que ocupe todo el ancho disponible de la tarjeta */
+  display: flex; 
   flex-direction: column;
-  padding: 15px;
+  padding: 50px; /* Mantuve el padding interno */
+  gap: 20px; /* Mantuve el espacio entre elementos */
 }
 
+.card__content h3 {
+  font-size: 2em; /* Título más grande */
+  color: #4C4A59;
+  margin-bottom: 15px;
+  font-weight: 600; /* Título un poco más negrita */
+}
+
+.card__content p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.7; /* Mejor espaciado entre líneas */
+}
+
+
+.card__content label {
+  display: block;
+  margin-bottom: 10px;
+  color: #4C4A59;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.card__content input[type="text"],
+.card__content input[type="number"] {
+  padding: 15px; /* Más padding en los inputs */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Bordes más redondeados en inputs */
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: #333;
+}
+
+.card__content ul {
+  list-style: disc;
+  padding-left: 20px;
+  width: 100%; /* La lista también ocupa todo el ancho */
+  box-sizing: border-box;
+}
+
+.card__content ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  font-size: 1em;
+}
+
+.card__content ul li:last-child {
+  border-bottom: none;
+}
 
 .card__buttons {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  align-items: center;
-  width: 100%;
-  height: auto; /* Ajustar la altura automáticamente */
-  padding: 10px;
-  border-top: 1px solid #eee; /* Separador sutil */
+  justify-content: flex-end;
+  padding: 40px;
+  border-top: 1px solid #eee;
+  width: 100%; /* Los botones también ocupan todo el ancho si es necesario */
+  box-sizing: border-box;
 }
 
+
+
+
 .card__buttons button {
-  height: 30px;
-  padding: 8px 15px;
+  height: 45px;
+  padding: 12px 24px;
   cursor: pointer;
-  background-color: #f0f0f0; /* Un gris claro para los botones */
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  box-shadow: none;
-  color: #333;
-  font-size: 14px;
-  font-weight: normal;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-color: #F2CDAC;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  color: #4C4A59;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  width: auto; /* Los botones se ajustan al contenido por defecto */
+  margin-left: 10px; /* Espacio entre botones si hay varios */
+
 }
 
 .card__buttons button:first-child,
@@ -334,20 +436,29 @@
 }
 
 .card__buttons button:first-child {
-  background-color: #1B7F7A; /* Color акцентный para el primer botón */
+  background-color: #1B7F7A;
   color: white;
+  margin-left: 0; /* Eliminar margen del primer botón */
 }
 .card__buttons button:last-child {
-  background-color: white; /* Fondo blanco para el segundo botón */
-  color: #1B7F7A; /* Color акцентный para el texto del segundo botón */
+  background-color: white;
+  color: #1B7F7A;
+  border: 1px solid #1B7F7A;
 }
 
 .card__buttons button:hover {
-  background-color: #d9d9d9; /* Un gris ligeramente más oscuro al hacer hover */
+  background-color: #E0BABA;
+  transform: scale(1.02);
 }
 
 .card__buttons button:first-child:hover {
-  background-color: #0a4d49; /* Un tono más oscuro del акцентный al hacer hover */
+  background-color: #086360;
+}
+
+.card__buttons button:last-child:hover {
+  background-color: #F0E0D1;
+  color: #086360;
+  border-color: #086360;
 }
 
 .card__button {
@@ -362,4 +473,6 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  font-size: 1.2em;
+  color: #777;
 }

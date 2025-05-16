@@ -4,23 +4,22 @@ import adminImage from "../assets/admin.png";
 import teacherImage from "../assets/Teacher.png";
 import studentImage from "../assets/Student.png";
 
-const MenuLateral = () => {
+const MenuLateral = ({ onMenuItemClick }) => { // Recibimos la función como prop
   let redireccion = useNavigate();
-  const rol = localStorage.getItem("rol"); // Obtener el rol del usuario
+  const rol = localStorage.getItem("rol");
 
   function cerrarSesion() {
     localStorage.removeItem("token");
     localStorage.removeItem("usuario");
-    localStorage.removeItem("rol"); // Eliminar el rol al cerrar sesión
+    localStorage.removeItem("rol");
     alertaRedireccion("Cerrando sesión", "/", redireccion);
   }
 
-  // Seleccionar la imagen según el rol
   const getImageByRole = () => {
     if (rol === "admin") return adminImage;
     if (rol === "Teacher") return teacherImage;
     if (rol === "Student") return studentImage;
-    return ""; // Imagen por defecto si no hay rol
+    return "";
   };
 
   return (
@@ -37,33 +36,50 @@ const MenuLateral = () => {
       <nav className="aplicacion__menu-lateral-navegacion">
         {(rol === "Teacher" || rol === "admin") && (
           <>
-            <a className="aplicacion__menu-lateral-navegacion-item" href="">
+            <button
+              onClick={() => onMenuItemClick('crearExamen')} // Llamamos a la función al hacer clic
+              className="aplicacion__menu-lateral-navegacion-item"
+            >
               Crear Examen
-            </a>
-            <a className="aplicacion__menu-lateral-navegacion-item" href="">
+            </button>
+            <button
+              onClick={() => onMenuItemClick('visualizarNotas')} // Llamamos a la función al hacer clic
+              className="aplicacion__menu-lateral-navegacion-item"
+            >
               Visualizar Notas
-            </a>
+            </button>
           </>
         )}
         {(rol === "Student" || rol === "admin") && (
           <>
-            <a className="aplicacion__menu-lateral-navegacion-item" href="">
+            <button
+              onClick={() => onMenuItemClick('realizarExamen')} // Llamamos a la función al hacer clic
+              className="aplicacion__menu-lateral-navegacion-item"
+            >
               Realizar Examen
-            </a>
-            <a className="aplicacion__menu-lateral-navegacion-item" href="">
+            </button>
+            <button
+              onClick={() => onMenuItemClick('verMisNotas')} // Llamamos a la función al hacer clic
+              className="aplicacion__menu-lateral-navegacion-item"
+            >
               Ver Mis Notas
-            </a>
+            </button>
           </>
         )}
         {rol === "admin" && (
           <>
-            <a className="aplicacion__menu-lateral-navegacion-item" href="">
+            <button
+              onClick={() => onMenuItemClick('gestionUsuarios')} // Llamamos a la función al hacer clic
+              className="aplicacion__menu-lateral-navegacion-item"
+            >
               Gestión de Usuarios
-            </a>
-            <a className="aplicacion__menu-lateral-navegacion-item" href="">
+            </button>
+            <button
+              onClick={() => onMenuItemClick('configuracion')} // Llamamos a la función al hacer clic
+              className="aplicacion__menu-lateral-navegacion-item"
+            >
               Configuración
-            </a>
-            
+            </button>
           </>
         )}
         <button
