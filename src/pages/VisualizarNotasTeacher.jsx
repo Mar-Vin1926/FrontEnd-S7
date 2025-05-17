@@ -17,7 +17,7 @@ const VisualizarNotasTeacher = () => {
 
                   <table>
                     <thead>
-                      <tr>
+                      <tr className="table__header">
                         <th>Nombre del Estudiante</th>
                         <th>Nota</th>
                       </tr>
@@ -25,11 +25,19 @@ const VisualizarNotasTeacher = () => {
                     <tbody>
                       <tr>
                         <td>Marvin Esteban</td>
-                        <td>5.0</td>
+                        <td className="n">5.0</td>
                       </tr>
                       <tr>
                         <td>Paola Murillo</td>
-                        <td>4.9</td>
+                        <td className="n">4.9</td>
+                      </tr>
+                      <tr>
+                        <td>Kevin Olivella</td>
+                        <td className="n">1.5</td>
+                      </tr>
+                      <tr>
+                        <td>Carlitos</td>
+                        <td className="n">4.9</td>
                       </tr>
                       {/* Agrega más filas según sea necesario */}
                     </tbody>

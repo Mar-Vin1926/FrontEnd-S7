@@ -54,7 +54,7 @@ function Login() {
         </div>
         <div className="form_back">
           <div className="form_details">SignUp</div>
-          <input type="text" className="input" placeholder="Full Name" />
+          <input type="text" className="input" placeholder="Username" />
           <input type="email" className="input" placeholder="Email" />
           <select
             className="input"

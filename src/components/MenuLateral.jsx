@@ -1,8 +1,8 @@
 import { alertaRedireccion } from "../helpers/funciones";
 import { useNavigate, NavLink } from "react-router-dom";
-import adminImage from "../assets/admin.png";
-import teacherImage from "../assets/Teacher.png";
-import studentImage from "../assets/Student.png";
+import adminImage from "../assets/admin.jpg";
+import teacherImage from "../assets/Teacher.jpeg";
+import studentImage from "../assets/student.jpeg";
 
 const MenuLateral = () => {
   const redireccion = useNavigate();
