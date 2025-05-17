@@ -14,13 +14,13 @@ function Login() {
   console.log(generarToken())
 
   function iniciarSesion() {
-    if (getUsuario === "teacher" && getPassword === "teacher123") {
+    if (getUsuario === "teacher" && getPassword === "teacher") {
       let token = generarToken();
       localStorage.setItem("token", token);
       localStorage.setItem("usuario", getUsuario);
       localStorage.setItem("rol", "Teacher"); // Guardar el rol
       alertaRedireccion("Bienvenido, Teacher", "/home", redireccion);
-    } else if (getUsuario === "student" && getPassword === "student123") {
+    } else if (getUsuario === "student" && getPassword === "student") {
       let token = generarToken();
       localStorage.setItem("token", token);
       localStorage.setItem("usuario", getUsuario);

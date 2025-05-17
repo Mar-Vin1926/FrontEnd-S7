@@ -5,10 +5,6 @@ const Home = () => {
   return (
     <div className="aplicacion">
       <MenuLateral />
-
-      <div className="aplicacion__contenido">
-        <div className="aplicacion__contenido-fondo"></div>
-
         <main className="aplicacion__principal">
           <section className="aplicacion__informacion">
             <div className="card">
@@ -20,7 +16,6 @@ const Home = () => {
           </section>
         </main>
       </div>
-    </div>
   );
 };
 
