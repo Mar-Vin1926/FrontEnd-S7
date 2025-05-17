@@ -105,7 +105,7 @@ Este proyecto no tiene una licencia específica definida actualmente. Todos los 
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia, no dudes en contactarnos a través de [tu correo electrónico de contacto] o creando un issue en el repositorio.
+Si tienes alguna pregunta o sugerencia, no dudes en contactarnos a través de [marvegarciacor@cesde.net] o creando un issue en el repositorio.
 
 ---
 
