@@ -110,8 +110,8 @@ Si tienes alguna pregunta o sugerencia, no dudes en contactarnos a través de [m
 ---
 
 ## Autor
-Marvin Garcia, cc 1037623187, correo: marvegarciacor@cesde.net.
-Kevin Olivella, cc 1140858067 correo: kolivella@cesde.net.
-Paola Murillo, cc 1020415717  correo: pamurillo@cesde.net.
+* Marvin Garcia, cc 1037623187, correo: marvegarciacor@cesde.net
+* Kevin Olivella, cc 1140858067 correo: kolivella@cesde.net
+* Paola Murillo, cc 1020415717  correo: pamurillo@cesde.net
  
 **¡Gracias por explorar EvaluAPP!**
