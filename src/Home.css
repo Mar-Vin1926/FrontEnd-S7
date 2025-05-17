@@ -68,7 +68,7 @@
 
 .aplicacion__menu-lateral-navegacion-item {
   display: block; /* Para que el padding ocupe todo el ancho */
-  padding: 10px 0; /* Ajusté el padding vertical */
+  padding: 10px 20px; /* Ajusté el padding vertical */
   text-decoration: none;
   color: #555; /* Un gris medio para el texto */
   letter-spacing: 1px;
@@ -78,8 +78,10 @@
   border: none;
   font-size: 16px; /* Reduje el tamaño de la fuente */
   text-align: center;
+  margin-top: 10px;
 
 }
+
 
 .aplicacion__menu-lateral-navegacion-item::after {
    content: '';
@@ -374,9 +376,9 @@ display: none; /* Oculté la sección de herramientas */
 .card__buttons {
   display: flex;
   justify-content: flex-end;
-  padding: 40px;
+  padding: 20px; /* Reduje el padding para que no ocupe tanto espacio vertical */
   border-top: 1px solid #eee;
-  width: 100%; /* Los botones también ocupan todo el ancho si es necesario */
+  width: 10px;
   box-sizing: border-box;
 }
 
@@ -384,7 +386,7 @@ display: none; /* Oculté la sección de herramientas */
 
 
 .card__buttons button {
-  height: 45px;
+  height: 25px;
   padding: 12px 24px;
   cursor: pointer;
   background-color: #F2CDAC;
@@ -393,7 +395,7 @@ display: none; /* Oculté la sección de herramientas */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   color: #4C4A59;
   font-size: 1.1em;
-  font-weight: 500;
+  font-weight: 500; 
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
   width: auto; /* Los botones se ajustan al contenido por defecto */
   margin-left: 10px; /* Espacio entre botones si hay varios */
@@ -432,11 +434,21 @@ display: none; /* Oculté la sección de herramientas */
 }
 
 .card__button {
-  width: 45%;
+  width: 20%;
   cursor: pointer;
-  background: none;
+  background: #f0f0f0;
   border: solid 1px black;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: #333;
+
 }
+
+.card__button:hover {
+  background-color: #1B7F7A; /* Un gris claro al pasar el ratón */
+  transform: scale(1.03);
+}
+
 
 .cards__vacias {
   position: absolute;

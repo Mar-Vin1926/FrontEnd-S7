@@ -1,4 +1,5 @@
 import MenuLateral from "../components/MenuLateral";
+import "../Home.css";
 
 const CrearExamen = () => {
   return (
