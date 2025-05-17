@@ -110,8 +110,8 @@ Si tienes alguna pregunta o sugerencia, no dudes en contactarnos a través de [m
 ---
 
 ## Autor
-Marvin Garcia
-Kevin Olivella
-Paola Murillo
+Marvin Garcia,
+Kevin Olivella,
+Paola Murillo.
 
 **¡Gracias por explorar EvaluAPP!**
