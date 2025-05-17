@@ -28,7 +28,7 @@ EvaluAPP es una aplicación web diseñada para la gestión de evaluaciones y not
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone https://github.com/Mar-Vin1926/Maquetacion-Marvin.git
+    git clone https://github.com/Mar-Vin1926/FrontEnd-S7.git
     ```
 2.  **Navega al directorio del proyecto:**
     ```bash
