@@ -42,7 +42,7 @@ function Login() {
       <input id="signup_toggle" type="checkbox" />
       <form className="form">
         <div className="form_front">
-          <div className="form_details">Login</div>
+          <div className="form_details">EvaluAPP</div>
           <input onChange={(e) => setUsuario(e.target.value)} type="text" className="input" placeholder="Username" />
           <input onChange={(e) => setPassword(e.target.value)} type="password" className="input" placeholder="Password" />
           <button type='button' onClick={iniciarSesion} className="btn">Login</button>
