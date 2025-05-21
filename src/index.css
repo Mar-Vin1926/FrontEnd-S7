@@ -9,6 +9,11 @@
 }
 
 body {
+  background-image: url('./assets/Tablero_Matematico.jpg'); /* Ruta relativa desde index.css */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed;
   background-color: #0a4d49; /* Ejemplo: Usando uno de los tonos melocotón claro */
   margin: 0;
   padding: 0;
