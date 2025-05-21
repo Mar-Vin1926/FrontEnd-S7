@@ -62,7 +62,7 @@ const LandingPage = () => {
             </section>
 
             <footer className="landing-footer">
-                <p>&copy; 2024 EvaluAPP. Todos los derechos reservados.</p>
+                <p>&copy; 2025 EvaluAPP. Todos los derechos reservados.</p>
             </footer>
         </div>
     );
