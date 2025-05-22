@@ -458,3 +458,52 @@ display: none; /* Oculté la sección de herramientas */
   font-size: 1.2em;
   color: #777;
 }
+
+
+.contBienvenido {
+  position: relative;
+  left: 292px;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 500px;
+  top: 150px;
+
+}
+.card__content .StyBienvenido {
+  width: 100%;
+  font-size: 7em;
+  text-align: right;
+  margin: 0;
+  padding-right: 30px;
+  color: #1B7F7A;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  transition: 
+    transform 0.3s,
+    color 0.3s,
+    text-shadow 0.3s;
+  cursor: pointer;
+  text-shadow: 2px 4px 12px #f2cdac33;
+}
+
+.card__content .StyBienvenido:hover {
+  color: #002838;
+  transform: scale(1.08) rotate(-2deg);
+  text-shadow: 0 8px 32px #badef3, 0 2px 8px #1B7F7A;
+}
+
+
+.DescripcionBienvenido {
+  position: relative;
+  top: 210px;
+  left: -300px;
+  font-size: 1.3em;
+  color: #1B7F7A;
+  font-family: 'Montserrat', Arial, sans-serif;
+  text-align: right;
+  margin: 0;
+  font-weight: bold;
+  transition: color 0.3s;
+}

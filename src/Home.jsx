@@ -9,8 +9,10 @@ const Home = () => {
           <section className="aplicacion__informacion">
             <div className="card">
               <div className="card__content">
-                <h3>Bienvenido</h3>
-                <p>Selecciona una opción del menú lateral para comenzar.</p>
+                <div className="contBienvenido">
+              <h3 className="StyBienvenido">Bienvenido</h3>
+                </div>
+                <p className="DescripcionBienvenido">Selecciona una opción del menú lateral para comenzar.</p>
               </div>
             </div>
           </section>
