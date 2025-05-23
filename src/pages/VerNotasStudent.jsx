@@ -10,7 +10,7 @@ const VerNotasStudent = () => {
           <section className="aplicacion__informacion">
             <div className="card">
               <div className="card__content">
-                <h3>Ver Mis Notas</h3>
+                <h3>Ver Mis Resultados</h3>
                 <p>Ingresa tu nombre para ver tus notas:</p>
                 <div>
                   <label>Tu Nombre:</label>

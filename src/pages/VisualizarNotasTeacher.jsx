@@ -12,7 +12,7 @@ const VisualizarNotasTeacher = () => {
             <section className="aplicacion__informacion">
               <div className="card">
                 <div className="card__content">
-                  <h3>Visualizar Notas</h3>
+                  <h3>Visualizar Resultados</h3>
                   <p>Lista de estudiantes y sus notas:</p>
 
                   <table>

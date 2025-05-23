@@ -45,7 +45,7 @@ const MenuLateral = () => {
               Crear Examen
             </NavLink>
             <NavLink to="/visualizar-notas" className={navLinkClass}>
-              Visualizar Notas
+              Visualizar Resultados
             </NavLink>
           </>
         )}
@@ -55,7 +55,7 @@ const MenuLateral = () => {
               Realizar Examen
             </NavLink>
             <NavLink to="/ver-notas" className={navLinkClass}>
-              Ver Mis Notas
+              Ver Mis Resultados
             </NavLink>
           </>
         )}
