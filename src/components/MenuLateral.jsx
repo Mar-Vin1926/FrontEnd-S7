@@ -29,6 +29,17 @@ const MenuLateral = () => {
 
   return (
     <aside className="aplicacion__menu-lateral">
+      {/* Añadimos las burbujas */}
+      <div className="bubble" style={{ top: '10%', left: '10%' }}></div>
+      <div className="bubble" style={{ top: '30%', left: '30%' }}></div>
+      <div className="bubble" style={{ top: '50%', left: '50%' }}></div>
+      <div className="bubble" style={{ top: '70%', left: '70%' }}></div>
+      <div className="bubble" style={{ top: '90%', left: '90%' }}></div>
+      <div className="bubble" style={{ top: '20%', left: '20%' }}></div>
+      <div className="bubble" style={{ top: '40%', left: '40%' }}></div>
+      <div className="bubble" style={{ top: '60%', left: '60%' }}></div>
+      <div className="bubble" style={{ top: '80%', left: '80%' }}></div>
+      
       <h1 className="aplicacion__menu-lateral-logo">
         EvaluAPP <span className="aplicacion__menu-lateral-logo--resaltado"></span>
       </h1>

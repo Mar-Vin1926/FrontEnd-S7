@@ -5,10 +5,11 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  background: #F2F2F2;
 }
 
 .aplicacion__menu-lateral {
-  width: 20%;
+  width: 22%;
   position: fixed;
   left: 0;
   top: 0;
@@ -17,32 +18,144 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  padding: 20px; /* Aumenté un poco el padding para más espacio */
-  background-color: #f8f8f8; /* Ejemplo: Un gris muy claro */
+  padding: 20px;
+  background: #3F618C;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 2px 0 10px #3F618C22;
+  border-radius: 18px;
+}
+
+/* Animación de movimiento dinámico para las burbujas */
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translate(20px, -30px) rotate(10deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(40px, 0) rotate(-5deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(20px, 30px) rotate(5deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.5;
+  }
+}
+
+/* Clase para las burbujas */
+.bubble {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #BF7256;
+  opacity: 0.7;
+  animation: float 8s ease-in-out infinite;
+  box-shadow: 0 0 10px #6CA6D9;
+}
+.bubble:nth-child(even) {
+  background: #6CA6D9;
+  box-shadow: 0 0 10px #BF7256;
+}
+
+/* Posicionamiento de las burbujas */
+.bubble:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(3) {
+  left: 50%;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(4) {
+  left: 70%;
+  animation-delay: 6s;
+}
+
+.bubble:nth-child(5) {
+  left: 90%;
+  animation-delay: 8s;
+}
+
+/* Animación de rotación para la imagen */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Efecto de resplandor para el logo */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #1B7F7A;
+  }
+  50% {
+    text-shadow: 0 0 10px #1B7F7A;
+  }
+  100% {
+    text-shadow: 0 0 5px #1B7F7A;
+  }
+}
+
+/* Efecto de desplazamiento para los enlaces */
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .aplicacion__menu-lateral-logo {
-  font-size: 30px; /* Reduje un poco el tamaño */
+  font-size: 30px;
   text-align: center;
   display: flex;
-  letter-spacing: 1px; /* Reduje el espaciado */
-  color: #333; /* Un gris oscuro */
+  letter-spacing: 1px;
+  color: #261814;
   cursor: pointer;
-  margin-bottom: 20px; /* Añadí margen inferior */
+  margin-bottom: 20px;
+  animation: glow 3s ease-in-out infinite;
+  font-weight: bold;
+  background: linear-gradient(90deg, #6CA6D9 70%, #BF7256 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 .aplicacion__menu-lateral-logo--resaltado {
-  color: #1B7F7A; /* Usando un color акцентный de tu paleta */
+  color: #BF7256;
   margin-left: 2px;
 }
 
 .aplicacion__menu-lateral-logo-imagen {
-  width: 60%; /* Reduje un poco el tamaño */
+  width: 60%;
   border-radius: 8px;
   transition: ease-in-out 0.3s;
-  margin-bottom: 30px; /* Añadí margen inferior */
-  border: 1px solid #ddd; /* Añadí un borde sutil */
-  box-shadow: none;
+  margin-bottom: 30px;
+  border: 2px solid #6CA6D9;
+  box-shadow: 0 0 15px #BF725644;
 }
 
 .aplicacion__menu-lateral-logo-imagen:hover {
@@ -67,19 +180,33 @@
 }
 
 .aplicacion__menu-lateral-navegacion-item {
-  display: block; /* Para que el padding ocupe todo el ancho */
-  padding: 10px 20px; /* Ajusté el padding vertical */
+  display: block;
+  padding: 10px 20px;
   text-decoration: none;
-  color: #555; /* Un gris medio para el texto */
+  color: #261814;
   letter-spacing: 1px;
-  font-weight: 500; /* Un peso de fuente más ligero */
+  font-weight: 500;
   position: relative;
-  background: none;
+  background: #85C8F2;
   border: none;
-  font-size: 16px; /* Reduje el tamaño de la fuente */
+  font-size: 16px;
   text-align: center;
   margin-top: 10px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px #3F618C33;
+}
 
+.aplicacion__menu-lateral-navegacion-item.activo {
+  background: #BF7256;
+  color: #fff;
+  font-weight: bold;
+}
+
+.aplicacion__menu-lateral-navegacion-item:hover {
+  background: #6CA6D9;
+  color: #261814;
+  box-shadow: 0 4px 12px #6CA6D966;
 }
 
 
@@ -132,12 +259,13 @@
 
 .aplicacion__principal {
   width: 100%;
-  max-width: 1200px; /* Limitar el ancho máximo del contenido */
-  min-height: auto; /* Ajustar la altura automáticamente */
+  max-width: 1200px;
+  min-height: auto;
   display: flex;
-  justify-content: flex-start; /* Alinear los elementos al inicio */
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  background: #85C8F2;
 }
 
 .aplicacion__eslogan {
@@ -222,15 +350,16 @@
 
 .card {
   position: relative;
-  width: 75vw; /* Ocupa el 75% del ancho de la ventana */
-  max-width: 1200px; /* Opcional: Un ancho máximo para pantallas grandes */
-  height: 90vh; /* Ocupa el 90% de la altura de la ventana */
-  margin-left: 15%; /* Empuja el card hacia la derecha (ajusta este valor) */
-  border: 1px solid #e0e0e0;
+  right: 180px;
+  width: 75vw;
+  max-width: 1200px;
+  height: 90vh;
+  margin-left: 15%;
+  border: 1px solid #3F618C;
   border-radius: 12px;
   z-index: 3;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  background-color: #F2F2F2;
+  box-shadow: 0 2px 20px #3F618C22;
 }
 
 .card__content .table__header {
@@ -435,17 +564,19 @@ display: none; /* Oculté la sección de herramientas */
 
 .card__button {
   width: 20%;
+  color: white;
   cursor: pointer;
-  background: #f0f0f0;
-  border: solid 1px black;
-  border-radius: 8px;
+  background: #1b7f7a;
   padding: 10px;
-  box-shadow: #333;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: background 0.2s;
 
 }
 
 .card__button:hover {
-  background-color: #1B7F7A; /* Un gris claro al pasar el ratón */
+  background-color: #8aaff3; 
   transform: scale(1.03);
 }
 

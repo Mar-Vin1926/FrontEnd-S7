@@ -39,6 +39,12 @@ function Login() {
 
   return (
     <div className="container">
+      {/* Burbujas animadas de fondo */}
+      <div className="bubble-login"></div>
+      <div className="bubble-login"></div>
+      <div className="bubble-login"></div>
+      <div className="bubble-login"></div>
+      <div className="bubble-login"></div>
       <input id="signup_toggle" type="checkbox" />
       <form className="form">
         <div className="form_front">

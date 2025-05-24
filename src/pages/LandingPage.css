@@ -6,8 +6,9 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif; /* Sugiero Inter o 'Roboto' para un look moderno */
-    color: #333; /* Color de texto oscuro por defecto */
+    color: #3F618C; /* Color de texto oscuro por defecto */
     line-height: 1.6;
+    background-color: #85C8F2; /* Fondo principal */
 }
 
 /* Opcional: Importar la fuente 'Inter' de Google Fonts en tu public/index.html <head>
@@ -18,7 +19,7 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #FFFFFF; /* Fondo blanco principal */
+    background-color: #85C8F2; /* Fondo principal */
     overflow-x: hidden;
 }
 
@@ -39,11 +40,11 @@ body, html {
 .navbar-brand {
     font-size: 1.8em;
     font-weight: 700;
-    color: #4C4A59; /* Tu color oscuro para el logo/marca */
+    color: #3F618C; /* Tu color oscuro para el logo/marca */
 }
 
 .navbar-links .navbar-button {
-    background-color: #0897B4; /* Tu color azul para el botón de acento */
+    background-color: #3F618C; /* Tu color azul para el botón de acento */
     color: white;
     padding: 12px 25px;
     border: none;
