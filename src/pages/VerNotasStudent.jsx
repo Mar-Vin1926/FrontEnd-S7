@@ -6,7 +6,7 @@ const VerNotasStudent = () => {
       <MenuLateral />
 
       <div className="aplicacion__contenido">
-        <main className="aplicacion__principal ver-notas-student__principal-con-fondo">
+        <main className="aplicacion__principal">
           <section className="aplicacion__informacion">
             <div className="card">
               <div className="card__content">
