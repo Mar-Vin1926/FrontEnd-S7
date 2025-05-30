@@ -1,9 +1,11 @@
 import MenuLateral from "../components/MenuLateral";
+import MenuLateralStudent from "../components/MenuLateralStudent";
 
 const Configuracion = () => {
+  const rol = localStorage.getItem("rol");
   return (
     <div className="aplicacion">
-      <MenuLateral />
+      {rol === "admin" ? <MenuLateral /> : <MenuLateralStudent />}
 
       <div className="aplicacion__contenido">
         <main className="aplicacion__principal">

@@ -1,10 +1,25 @@
 import MenuLateral from "./components/MenuLateral";
+import MenuLateralStudent from "./components/MenuLateralStudent";
+import BotonCerrarSesion from "./components/BotonCerrarSesion";
+import { useNavigate } from "react-router-dom";
+import { alertaRedireccion } from "./helpers/funciones";
 import "./Home.css";
 
 const Home = () => {
+  const rol = localStorage.getItem("rol");
+  const redireccion = useNavigate();
+
+  const cerrarSesion = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("usuario");
+    localStorage.removeItem("rol");
+    alertaRedireccion("Cerrando sesión", "/", redireccion);
+  };
+
   return (
     <div className="aplicacion">
-      <MenuLateral />
+      {rol === "admin" ? <MenuLateral /> : <MenuLateralStudent />}
+      <BotonCerrarSesion onCerrarSesion={cerrarSesion} />
         <main className="aplicacion__principal">
           <section className="aplicacion__informacion">
             <div className="card">

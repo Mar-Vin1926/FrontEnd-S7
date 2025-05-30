@@ -1,0 +1,19 @@
+.boton-cerrar-sesion {
+  position: fixed;
+  right: 70px;
+  padding: 8px 15px;
+  background-color: var(--accent-primary); /* Usando tu color de acento */
+  color: var(--bg-primary); /* Texto oscuro para contraste */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.boton-cerrar-sesion:hover {
+  background-color: var(--accent-secondary); /* Un tono más oscuro al pasar el ratón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

@@ -1,19 +1,12 @@
-import { alertaRedireccion } from "../helpers/funciones";
 import { useNavigate, NavLink } from "react-router-dom";
 import adminImage from "../assets/admin.jpg";
 import teacherImage from "../assets/Teacher.jpeg";
 import studentImage from "../assets/student.jpeg";
+import './MenuLateral.css'; // Importar estilos para el menú de Admin
 
 const MenuLateral = () => {
   const redireccion = useNavigate();
   const rol = localStorage.getItem("rol");
-
-  function cerrarSesion() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("usuario");
-    localStorage.removeItem("rol");
-    alertaRedireccion("Cerrando sesión", "/", redireccion);
-  }
 
   const getImageByRole = () => {
     if (rol === "admin") return adminImage;
@@ -46,84 +39,35 @@ const MenuLateral = () => {
       <h2>Usuario: {localStorage.getItem("usuario")}</h2>
       <img
         className="aplicacion__menu-lateral-logo-imagen"
-        src={getImageByRole()}
+        src={adminImage}
         alt={`Imagen del rol ${rol}`}
       />
       <nav className="aplicacion__menu-lateral-navegacion">
-        {(rol === "Teacher" || rol === "admin") && (
-          <>
-            <NavLink to="/crear-examen" className={navLinkClass}>
-              Crear Examen
-            </NavLink>
-            <NavLink to="/visualizar-notas" className={navLinkClass}>
-              Visualizar Resultados
-            </NavLink>
-          </>
-        )}
-        {(rol === "Student" || rol === "admin") && (
-          <>
-            <NavLink to="/realizar-examen" className={navLinkClass}>
-              Realizar Examen
-            </NavLink>
-            <NavLink to="/ver-notas" className={navLinkClass}>
-              Ver Mis Resultados
-            </NavLink>
-          </>
-        )}
-        {rol === "admin" && (
-          <>
-            <NavLink to="/gestionar-usuarios" className={navLinkClass}>
-              Gestión de Usuarios
-            </NavLink>
-            <NavLink to="/configuraciones" className={navLinkClass}>
-              Configuración
-            </NavLink>
-          </>
-        )}
-        <button
-          onClick={cerrarSesion}
-          type="button"
-          className="aplicacion__menu-lateral-navegacion-item"
-        >
-          Cerrar sesión
-        </button>
+        {/* Enlaces para Admin */}
+        <NavLink to="/crear-examen" className={navLinkClass}>
+          Crear Examen
+        </NavLink>
+        <NavLink to="/visualizar-notas" className={navLinkClass}>
+          Visualizar Resultados
+        </NavLink>
+        <NavLink to="/realizar-examen" className={navLinkClass}>
+          Realizar Examen
+        </NavLink>
+        <NavLink to="/ver-notas" className={navLinkClass}>
+          Ver Resultados
+        </NavLink>
+        <NavLink to="/gestionar-usuarios" className={navLinkClass}>
+          Gestión de Usuarios
+        </NavLink>
+        <NavLink to="/configuraciones" className={navLinkClass}>
+          Configuración
+        </NavLink>
       </nav>
     </aside>
   );
 };
 
 export default MenuLateral;
-
-
-// import { alertaRedireccion } from "../helpers/funciones";
-// import { useNavigate } from "react-router-dom";
-// import adminImage from "../assets/admin.png";
-// import teacherImage from "../assets/Teacher.png";
-// import studentImage from "../assets/Student.png";
-
-// const MenuLateral = ({ onMenuItemClick }) => { // Recibimos la función como prop
-//   let redireccion = useNavigate();
-//   const rol = localStorage.getItem("rol");
-
-//   function cerrarSesion() {
-//     localStorage.removeItem("token");
-//     localStorage.removeItem("usuario");
-//     localStorage.removeItem("rol");
-//     alertaRedireccion("Cerrando sesión", "/", redireccion);
-//   }
-
-//   const getImageByRole = () => {
-//     if (rol === "admin") return adminImage;
-//     if (rol === "Teacher") return teacherImage;
-//     if (rol === "Student") return studentImage;
-//     return "";
-//   };
-
-//   return (
-//     <aside className="aplicacion__menu-lateral">
-//       <h1 className="aplicacion__menu-lateral-logo">
-//         EvaluAPP <span className="aplicacion__menu-lateral-logo--resaltado"></span>
-//       </h1>
 //       <h2>Usuario: {localStorage.getItem("usuario")}</h2>
 //       <img
 //         className="aplicacion__menu-lateral-logo-imagen"

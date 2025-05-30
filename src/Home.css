@@ -8,90 +8,6 @@
   background: var(--bg-primary);
 }
 
-.aplicacion__menu-lateral {
-  width: 22%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-  background: var(--bg-secondary);
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 2px 0 10px var(--bg-secondary);
-  border-radius: 18px;
-}
-
-/* Animación de movimiento dinámico para las burbujas */
-@keyframes float {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 0.5;
-  }
-  25% {
-    transform: translate(20px, -30px) rotate(10deg);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translate(40px, 0) rotate(-5deg);
-    opacity: 1;
-  }
-  75% {
-    transform: translate(20px, 30px) rotate(5deg);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 0.5;
-  }
-}
-
-/* Clase para las burbujas */
-.bubble {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent-primary);
-  opacity: 0.7;
-  animation: float 8s ease-in-out infinite;
-  box-shadow: 0 0 10px var(--accent-secondary);
-}
-.bubble:nth-child(even) {
-  background: var(--accent-secondary);
-  box-shadow: 0 0 10px var(--accent-primary);
-}
-
-/* Posicionamiento de las burbujas */
-.bubble:nth-child(1) {
-  left: 10%;
-  animation-delay: 0s;
-}
-
-.bubble:nth-child(2) {
-  left: 30%;
-  animation-delay: 2s;
-}
-
-.bubble:nth-child(3) {
-  left: 50%;
-  animation-delay: 4s;
-}
-
-.bubble:nth-child(4) {
-  left: 70%;
-  animation-delay: 6s;
-}
-
-.bubble:nth-child(5) {
-  left: 90%;
-  animation-delay: 8s;
-}
-
 /* Animación de rotación para la imagen */
 @keyframes rotate {
   from {
@@ -99,19 +15,6 @@
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-/* Efecto de resplandor para el logo */
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 5px var(--accent-primary);
-  }
-  50% {
-    text-shadow: 0 0 10px var(--accent-primary);
-  }
-  100% {
-    text-shadow: 0 0 5px var(--accent-primary);
   }
 }
 
@@ -125,57 +28,6 @@
     transform: translateX(0);
     opacity: 1;
   }
-}
-
-.aplicacion__menu-lateral-logo {
-  font-size: 30px;
-  text-align: center;
-  display: flex;
-  letter-spacing: 1px;
-  color: var(--text-primary);
-  cursor: pointer;
-  margin-bottom: 20px;
-  animation: glow 3s ease-in-out infinite;
-  font-weight: bold;
-  background: linear-gradient(90deg, var(--accent-primary) 70%, var(--accent-secondary) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.aplicacion__menu-lateral-logo--resaltado {
-  color: var(--accent-primary);
-  margin-left: 2px;
-}
-
-.aplicacion__menu-lateral-logo-imagen {
-  width: 60%;
-  border-radius: 8px;
-  transition: ease-in-out 0.3s;
-  margin-bottom: 30px;
-  border: 2px solid var(--accent-primary);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-
-.aplicacion__menu-lateral-logo-imagen:hover {
-  transform: scale(1.05);
-  box-shadow: none;
-}
-
-.aplicacion__menu-lateral-navegacion {
-  position: relative;
-  padding: 0; /* Eliminé el padding izquierdo */
-  width: 100%;
-  height: auto; /* Ajusté la altura a automático */
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-.aplicacion__menu-lateral h2 {
-  font-size: 16px;
-  color: var(--text-secondary);
-  text-align: center;
-  margin-bottom: 15px;
 }
 
 .aplicacion__menu-lateral-navegacion-item {
@@ -257,7 +109,10 @@
 
 
 .aplicacion__principal {
-  width: 100%;
+  position: relative;
+  top: 30px;
+  left: 190px;
+  width: 0px;
   max-width: 1200px;
   min-height: auto;
   display: flex;
@@ -265,6 +120,7 @@
   align-items: center;
   flex-direction: column;
   background: var(--bg-secondary);
+
 }
 
 .aplicacion__eslogan {
@@ -351,7 +207,7 @@
 .card {
   position: relative;
   right: 180px;
-  width: 75vw;
+  width: 1700px;
   max-width: 1200px;
   height: 90vh;
   margin-left: 15%;
@@ -603,6 +459,7 @@ display: none; /* Oculté la sección de herramientas */
 
 }
 .card__content .StyBienvenido {
+
   width: 100%;
   font-size: 7em;
   text-align: right;
@@ -642,4 +499,12 @@ display: none; /* Oculté la sección de herramientas */
 
 * {
   font-family: 'Inter', sans-serif;
+}
+
+/* Estilos para posicionar el botón de cerrar sesión en Home.jsx */
+.boton-cerrar-sesion {
+  position: fixed; /* Posicionamiento fijo respecto a la ventana del navegador */
+  top: 20px;       /* Espacio desde la parte superior */
+  right: 20px;      /* Espacio desde la parte derecha */
+  z-index: 1000;   /* Asegura que esté por encima de otros elementos */
 }
