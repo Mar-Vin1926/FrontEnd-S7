@@ -1,6 +1,6 @@
 import MenuLateral from "../components/MenuLateral";
 import MenuLateralStudent from "../components/MenuLateralStudent";
-
+import './VerNotasStudent.css'; // <-- AGREGADO: Importación del CSS
 const VerNotasStudent = () => {
   const rol = localStorage.getItem("rol");
   return (
