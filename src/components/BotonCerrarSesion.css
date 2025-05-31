@@ -1,6 +1,6 @@
 .boton-cerrar-sesion {
   position: fixed;
-  right: 70px;
+  right: 23px;
   padding: 8px 15px;
   background-color: var(--accent-primary); /* Usando tu color de acento */
   color: var(--bg-primary); /* Texto oscuro para contraste */
