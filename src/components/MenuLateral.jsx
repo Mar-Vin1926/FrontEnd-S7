@@ -38,10 +38,10 @@ const MenuLateral = () => {
       </h1>
       <h2>Usuario: {localStorage.getItem("usuario")}</h2>
       <img
-        className="aplicacion__menu-lateral-logo-imagen"
-        src={adminImage}
-        alt={`Imagen del rol ${rol}`}
-      />
+  className="aplicacion__menu-lateral-logo-imagen"
+  src={getImageByRole()}  // <-- ASÍ DEBE QUEDAR
+  alt={`Imagen del rol ${rol}`}
+/>
       <nav className="aplicacion__menu-lateral-navegacion">
         {/* Enlaces para Admin */}
         <NavLink to="/crear-examen" className={navLinkClass}>
