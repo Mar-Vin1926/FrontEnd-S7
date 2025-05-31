@@ -1,5 +1,5 @@
 .boton-cerrar-sesion {
-  position: fixed;
+  position: absolute;
   right: 23px;
   padding: 8px 15px;
   background-color: var(--accent-primary); /* Usando tu color de acento */

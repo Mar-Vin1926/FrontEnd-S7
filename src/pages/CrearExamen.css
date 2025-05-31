@@ -1,0 +1,294 @@
+/* CrearExamen.css */
+
+.crear-examen-container {
+    position: relative;
+    right: -8px;
+    width: 1200px;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .crear-examen-titulo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ADFF2F;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .crear-examen-form {
+    background-color: #1A1A1A;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #E0E0E0;
+    font-size: 14px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="datetime-local"],
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: #0D0D0D;
+    color: #E0E0E0;
+    font-size: 14px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input[type="text"]:focus,
+  .form-group input[type="number"]:focus,
+  .form-group input[type="datetime-local"]:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #ADFF2F;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .preguntas-container {
+    margin-top: 30px;
+  }
+  
+  .preguntas-container h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ADFF2F;
+    font-weight: 600;
+  }
+  
+  .pregunta-card {
+    background-color: #0D0D0D;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #333;
+    position: relative;
+  }
+  
+  .pregunta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .pregunta-header h4 {
+    margin: 0;
+    color: #ADFF2F;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .opciones-container {
+    margin-top: 15px;
+  }
+  
+  .opciones-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #E0E0E0;
+    font-size: 14px;
+  }
+  
+  .opcion-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: #1A1A1A;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+  }
+  
+  .opcion-item input[type="radio"] {
+    margin-right: 12px;
+    accent-color: #ADFF2F;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .opcion-item input[type="text"] {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: #E0E0E0;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .opcion-item input[type="text"]:focus {
+    outline: none;
+  }
+  
+  .btn-eliminar {
+    background-color: #FF4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-eliminar:hover {
+    background-color: #CC0000;
+  }
+  
+  .btn-agregar-pregunta {
+    background-color: #333;
+    color: #ADFF2F;
+    border: 1px dashed #555;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+    transition: all 0.3s;
+  }
+  
+  .btn-agregar-pregunta:hover {
+    background-color: #444;
+    border-color: #ADFF2F;
+  }
+  
+  .btn-agregar-pregunta::before {
+    content: "+";
+    font-size: 20px;
+    margin-right: 8px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+  }
+  
+  .btn-cancelar,
+  .btn-guardar {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .btn-cancelar {
+    background-color: #333;
+    color: #E0E0E0;
+  }
+  
+  .btn-cancelar:hover {
+    background-color: #444;
+  }
+  
+  .btn-guardar {
+    background-color: #ADFF2F;
+    color: #0D0D0D;
+    font-weight: 600;
+  }
+  
+  .btn-guardar:hover {
+    background-color: #9ACD32;
+  }
+  
+  /* Estilos para el select personalizado */
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ADFF2F'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    padding-right: 40px;
+  }
+  
+  /* Estilos para el scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1A1A1A;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 992px) {
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .crear-examen-container {
+      padding: 15px;
+    }
+    
+    .crear-examen-form {
+      padding: 20px 15px;
+    }
+    
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    .btn-cancelar,
+    .btn-guardar {
+      padding: 10px 20px;
+      font-size: 13px;
+    }
+  }

@@ -1,0 +1,144 @@
+/* AsignarExamen.css */
+
+.asignar-examen {
+  position: relative;
+  width: 745px;
+  height: 300px;
+  color: #E0E0E0;
+  font-family: 'Inter', sans-serif;
+}
+
+.asignar-examen h2 {
+  color: #ADFF2F;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.descripcion-examen {
+  color: #A0A0A0;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.estudiantes-contenedor {
+  background-color: #1A1A1A;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #333333;
+}
+
+.estudiantes-contenedor h3 {
+  color: #E0E0E0;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.estudiantes-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.estudiante-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #2A2A2A;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.estudiante-item:hover {
+  background-color: #333333;
+}
+
+.estudiante-item input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.estudiante-item label {
+  cursor: pointer;
+  flex-grow: 1;
+  color: #E0E0E0;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.boton-asignar {
+  background-color: #ADFF2F;
+  color: #0D0D0D;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.boton-asignar:hover:not(:disabled) {
+  background-color: #9ACD32;
+}
+
+.boton-asignar:disabled {
+  background-color: #666666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.boton-cancelar {
+  background-color: transparent;
+  color: #E0E0E0;
+  border: 1px solid #666666;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.boton-cancelar:hover {
+  background-color: #333333;
+  border-color: #888888;
+}
+
+.cargando, .error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #E0E0E0;
+}
+
+.error {
+  color: #FF6B6B;
+}
+
+/* Estilos para la barra de desplazamiento */
+.estudiantes-lista::-webkit-scrollbar {
+  width: 8px;
+}
+
+.estudiantes-lista::-webkit-scrollbar-track {
+  background: #1A1A1A;
+  border-radius: 4px;
+}
+
+.estudiantes-lista::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 4px;
+}
+
+.estudiantes-lista::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}

@@ -8,6 +8,7 @@ import GestionUsuarios from '../pages/GestionUsuarios';
 import Configuracion from '../pages/Configuracion';
 import RutaProtegida from '../components/RutaProtegida';
 import LandingPage from '../pages/LandingPage';
+import AsignarExamen from '../pages/AsignarExamen';
 import { Navigate } from 'react-router-dom'; // <-- ¡Importamos LandingPage!
 
 // Es importante que este 'enrutador' sea un array de objetos de configuración
@@ -65,6 +66,14 @@ const enrutador = [
     ),
   },
   {
+    path: '/asignar-examen/:examenId',
+    element: (
+      <RutaProtegida rolesPermitidos={['Teacher', 'admin']}>
+        <AsignarExamen />
+      </RutaProtegida>
+    ),
+  },
+  {
     path: '/visualizar-notas',
     element: (
       <RutaProtegida rolesPermitidos={['Teacher', 'admin']}>
@@ -118,42 +127,3 @@ const enrutador = [
 ];
 
 export default enrutador;
-
-
-
-// import Login from '../pages/Login.jsx';
-// import Home from '../Home';
-// import RutaProtegida from '../components/RutaProtegida';
-
-// const enrutador = [
-//   {
-//     path: '/',
-//     element: <Login />,
-//   },
-//     {
-//     path: '/home',
-//     element: (
-//       <RutaProtegida rolRequerido="Teacher">
-//         <Home />
-//       </RutaProtegida>
-//     ),
-//   },
-//   {
-//     path: '/student',
-//     element: (
-//       <RutaProtegida rolRequerido="Student">
-//         <Home />
-//       </RutaProtegida>
-//     ),
-//   },
-//   {
-//     path: '/admin',
-//     element: (
-//       <RutaProtegida rolRequerido="admin">
-//         <Home /> 
-//       </RutaProtegida>
-//     ),
-//   },
-// ];
-
-// export default enrutador;
